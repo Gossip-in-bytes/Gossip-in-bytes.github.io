@@ -167,26 +167,15 @@
               <span>US</span>
             </div>
           </div>
-          <form action="mail.php">
-          <div class="screen-body-item">
-            <div class="app-form">
-              <div class="app-form-group">
-                <input class="app-form-control" placeholder="NAME" name="name" required >
-              </div>
-              <div class="app-form-group">
-                <input class="app-form-control" placeholder="EMAIL" name="email" required>
-              </div>
-              <div class="app-form-group">
-                <input class="app-form-control" placeholder="CONTACT NO" name="contact" required>
-              </div>
-              <div class="app-form-group message">
-                <input class="app-form-control" placeholder="MESSAGE" name="message" required>
-              </div>
-              <div class="app-form-group buttons">
-                <button class="app-form-button">SEND</button>
-              </div>
-            </div>
-          </div>
+           <form id="contact-form" method="post" action="mail.php">
+            Name*:&nbsp;&nbsp;<input name="name" type="text" class="form-control" placeholder="Your Name" required><br>
+            E-Mail*:&nbsp;&nbsp;<input name="email" type="email" class="form-control" placeholder="Your E-mail" required><br>
+            <p class="formfield">
+                <label for="textarea" style="font-weight: bold;">Message:</label>
+                <textarea id="textarea" name="message" placeholder="Leave Us A Message" rows="10" cols="30"></textarea>
+            </p>
+              <br>
+            <input type="submit" class="form-control submit" value="SUBMIT">
         </form>
         </div>
       </div>
