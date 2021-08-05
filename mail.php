@@ -3,7 +3,7 @@
     $visitor_email = $_POST['email'];
     $message = $_POST['message'];
 
-    $email_from = 'srivatsan.e0320054@sret.edu.in';
+    $email_from = 'adityafabrics@yahoo.in';
 
     $email_subject = "New Quick Enquiry";
 
