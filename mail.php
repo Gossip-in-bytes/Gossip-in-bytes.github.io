@@ -1,17 +1,23 @@
 <?php
-//get data from form
-$name = $_POST['name'];
-$email= $_POST['email'];
-$contact= $_POST['contact'];
-$message= $_POST['message'];
-$to = "vatsanmusic106@gmail.com";
-$subject = "Mail From LIFE EXPECTANCY TEAM";
-$txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Contact no = " . $contact . "\r\n Message =" . $message;
-$headers = "From: lifeexpectancyteam@gmail.com" . "\r\n" .
-"CC: ragulsanjeevan8925@gmail.com";
-if($email!=NULL){
-    mail($to,$subject,$txt,$headers);
-}
-//redirect
-header("Location:thankyou.html");
+    $name = $_POST['name'];
+    $visitor_email = $_POST['email'];
+    $message = $_POST['message'];
+
+    $email_from = 'srivatsan.e0320054@sret.edu.in';
+
+    $email_subject = "New Quick Enquiry";
+
+    $email_body = "User Name: $name.\n".
+                    "User Email: $visitor_email.\n".
+                        "User Message: $message.\n";
+    
+    $to = "vatsanmusic106@gmail.com";
+    
+    $headers = "From: $email_from \r\n";
+
+    $headers .="Reply-To: $visitor_email \r\n";
+
+    mail($to,$email_subject,$email_body,$headers);
+
+    header("Location: index.html");
 ?>
